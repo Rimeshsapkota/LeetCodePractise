@@ -20,10 +20,19 @@ public class ConvertingArrayToLinkedList {
             mover.next=temp;
             mover=temp;
         }
-
-        while (head!=null){
-            System.out.println(head.getData());
-            head=head.next;
+        Nodev7 tem= head;
+        System.out.println(lengthOfTheLinkedList(tem));
+        while (tem!=null){
+            System.out.println(tem.getData());
+            tem=tem.next;
         }
+    }
+    public static int lengthOfTheLinkedList(Nodev7 temp){
+        int count=0;
+        while (temp!=null){
+            temp=temp.next;
+            count++;
+        }
+        return count;
     }
 }
